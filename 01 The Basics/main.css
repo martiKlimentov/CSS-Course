@@ -1,0 +1,27 @@
+body {
+  font-family: cursive;
+}
+
+li:nth-child(2) code {
+  color: violet;
+}
+
+#assignment-instructions {
+  font-family: sans-serif;
+  color: aquamarine;
+}
+
+code {
+  font-family: monospace;
+  color: red;
+}
+
+li:not(:first-child) {
+  background-color: black;
+  color: white;
+}
+
+ol li {
+  background-color: black;
+  color: white;
+}
