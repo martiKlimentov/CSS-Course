@@ -1,0 +1,8 @@
+https://softserve.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=8a10de62-879b-4f6a-8bbf-6f8d1b63ba35
+https://flukeout.github.io/
+https://flexboxfroggy.com/
+http://www.flexboxdefense.com/
+https://webdesign.tutsplus.com/tutorials/exercises-in-flexbox-simple-web-components--cms-28049
+https://www.freecodecamp.org/learn/responsive-web-design/https://codegalaxy.io/app/htmlcss#
+https://www.w3resource.com/html-css-exercise/index.php
+
