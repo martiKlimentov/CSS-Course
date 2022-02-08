@@ -12,60 +12,61 @@
   </head>
 
   <body class="font-montserrat">
-    <div class=""></div>
-    <div class="hidden">
-      <h1 class="">Do you want to continue?</h1>
+    <div id="backdrop" class="z-40 hidden w-screen h-screen bg-slate-400 opacity-40"></div>
+    <div id="modal" class="hidden z-50 top-[20%] w-[40%] left-[30%] p-4 border-2 shadow-my-shadow bg-white font-bold text-center">
+      <h1 class="mb-2">Do you want to continue?</h1>
       <div class="">
-        <a href="start-hosting/index.html" class="modal__action">Yes!</a>
-        <button class="" type="button">No!</button>
+        <a href="start-hosting/index.html" class="p-2 bg-green-500">Yes!</a>
+        <button id="button-cancel" class="p-2 bg-red-500" type="button">No!</button>
       </div>
     </div>
-    <header class="flex items-center justify-between h-12 bg-light-green">
-      <div class="">
-        <!--button class="toggle-button">
-          <span class="toggle-button__bar"></span>
-          <span class="toggle-button__bar"></span>
-          <span class="toggle-button__bar"></span>
-        </button-->
-        <a href="index.html">
-          <img src="images/uhost-icon.png" class="h-10 ml-4" alt="uHost - Your favorite hosting company" />
-        </a>
+    <header class="fixed z-10 flex items-center w-full sm:justify-between h-14 bg-light-green">
+      <div class="flex sm:hidden">
+        <button id="toggle-btn" class="mt-3 ml-5">
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+        </button>
       </div>
-      <nav class="">
+
+      <a href="index.html">
+        <img src="images/uhost-icon.png" class="w-10 h-10 ml-4" alt="uHost - Your favorite hosting company" />
+      </a>
+      <nav class="hidden mr-5 sm:inline-block">
         <ul class="flex items-center font-bold">
-          <li class="mx-4 text-dark-green">
+          <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
             <a href="packages/index.html">Packages</a>
           </li>
-          <li class="mx-4 text-dark-green">
+          <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
             <a href="customers/index.html">Customers</a>
           </li>
-          <li class="px-3 py-1 mx-4 text-white rounded-lg bg-light-pink hover:text-light-pink hover:bg-white">
+          <li class="px-4 py-2 mx-4 text-white rounded-lg bg-strong-pink hover:text-strong-pink hover:bg-white">
             <a href="start-hosting/index.html">Start Hosting</a>
           </li>
         </ul>
       </nav>
     </header>
-    <!--nav class="mobile-nav">
-      <ul class="mobile-nav__items">
-        <li class="mobile-nav__item">
+    <nav id="mobile-nav" class="z-30 hidden w-40 h-48 p-4 bg-light-green top-14">
+      <ul>
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
           <a href="packages/index.html">Packages</a>
         </li>
-        <li class="mobile-nav__item">
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
           <a href="customers/index.html">Customers</a>
         </li>
-        <li class="mobile-nav__item mobile-nav__item--cta">
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
           <a href="start-hosting/index.html">Start Hosting</a>
         </li>
       </ul>
-    </nav-->
+    </nav>
     <main>
-      <section id="product-overview" class="flex items-end justify-start w-screen h-96" style="background: url('images/freedom.jpg') center/cover no-repeat border-box, #ff1b68">
-        <h1 class="h-10 mb-6 ml-6 text-5xl text-white font-anton">Get the freedom you deserve.</h1>
+      <section id="product-overview" class="relative bg-cover top-14 h-72 bg-main-image bg-product-overview">
+        <h1 class="absolute text-xl font-bold text-white sm:text-5xl bottom-8 left-8 font-anton">Get the freedom you deserve.</h1>
       </section>
       <section id="plans" class="w-screen">
         <h1 class="block w-screen my-6 text-2xl font-bold text-center text-light-green">Choose Your Plan</h1>
-        <div class="flex items-center justify-center">
-          <article class="flex-col p-4 text-center max-w-[15rem] bg-melon-green min-h-[22rem]">
+        <div class="flex flex-col items-center justify-center sm:flex-row plan">
+          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem]">
             <h1 class="mb-5 text-lg font-bold text-dark-green">FREE</h1>
             <h2 class="mb-5 text-2xl font-bold text-gray-400">$0/month</h2>
             <h3 class="mb-5 font-bold">For hobby projects or small teams.</h3>
@@ -75,14 +76,12 @@
               <li class="">10GB Storage</li>
               <li class="">Basic Support</li>
             </ul>
-            <div>
-              <button class="p-2 mt-2 font-bold text-white rounded-lg bg-dark-green">CHOOSE PLAN</button>
-            </div>
+            <button class="p-2 mt-2 font-bold text-white rounded-lg bg-dark-green hover:bg-white hover:text-dark-green">CHOOSE PLAN</button>
           </article>
-          <article class="flex-col p-4 text-center bg-medium-green max-w-[25rem] h-96">
+          <article class="flex-col p-4 text-center bg-medium-green w-[19rem] h-[25rem] shadow-my-shadow">
             <h1 class="w-full p-2 text-xl font-bold bg-white rounded-lg shadow-my-shadow text-light-green">RECOMMENDED</h1>
             <h1 class="mt-6 font-bold text-white">PLUS</h1>
-            <h2 class="mt-6 font-bold text-dark-green">$29/month</h2>
+            <h2 class="mt-6 text-2xl font-bold text-dark-green">$29/month</h2>
             <h3 class="mt-4 font-bold text-white">For ambitious projects.</h3>
             <ul class="my-4 text-white">
               <li class="">5 Workspaces</li>
@@ -90,11 +89,9 @@
               <li class="">100GB Storage</li>
               <li class="">Plus Support</li>
             </ul>
-            <div>
-              <button class="p-2 font-bold text-white rounded-lg bg-dark-green">CHOOSE PLAN</button>
-            </div>
+            <button class="p-2 font-bold text-white rounded-lg bg-dark-green hover:bg-white hover:text-dark-green">CHOOSE PLAN</button>
           </article>
-          <article class="flex-col p-4 text-center max-w-[15rem] bg-melon-green min-h-[22rem]">
+          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem]">
             <h1 class="mb-5 text-lg font-bold text-dark-green">PREMIUM</h1>
             <h2 class="mb-5 text-2xl font-bold text-gray-400">$99/month</h2>
             <h3 class="mb-5 font-bold">Your enterprise solution.</h3>
@@ -104,17 +101,15 @@
               <li class="">Unlimited Storage</li>
               <li class="">Priority Support</li>
             </ul>
-            <div>
-              <button class="p-2 mt-2 font-bold text-white rounded-lg bg-dark-green">CHOOSE PLAN</button>
-            </div>
+            <button class="p-2 mt-2 font-bold text-white rounded-lg bg-dark-green hover:text-dark-green hover:bg-white">CHOOSE PLAN</button>
           </article>
         </div>
       </section>
-      <section id="key-features" class>
-        <h1 class="section-title">Many Good Reasons to Stick Around</h1>
-        <ul class="key-feature__list">
-          <li class="key-feature">
-            <div class="key-feature__image">
+      <section id="key-features" class="block p-5 my-5 bg-strong-pink">
+        <h1 class="w-full mb-2 font-bold text-center text-white">Many Good Reasons to Stick Around</h1>
+        <ul class="flex flex-col items-center justify-center sm:flex-row">
+          <li class="max-w-[15rem] text-center m-3">
+            <div class="w-32 h-32 p-6 m-auto rounded-full border-x bg-light-pink">
               <svg viewBox="0 0 512 512">
                 <path
                   style="fill: #f09b24"
@@ -185,10 +180,10 @@
                 />
               </svg>
             </div>
-            <p class="key-feature__description">3,857,000 Trusting Customers</p>
+            <p class="font-bold text-white">3,857,000 Trusting Customers</p>
           </li>
-          <li class="key-feature">
-            <div class="key-feature__image">
+          <li class="max-w-[15rem] text-center m-3">
+            <div class="w-32 h-32 p-6 m-auto rounded-full border-x bg-light-pink">
               <svg viewBox="0 0 512 512">
                 <path style="fill: #69788d" d="M248,0H8C3.582,0,0,3.582,0,8v496c0,4.418,3.582,8,8,8h240c4.418,0,8-3.582,8-8V8  C256,3.582,252.418,0,248,0z" />
                 <path style="fill: #56677e" d="M24,504V8c0-4.418,3.582-8,8-8H8C3.582,0,0,3.582,0,8v496c0,4.418,3.582,8,8,8h24  C27.582,512,24,508.418,24,504z" />
@@ -236,10 +231,10 @@
                 </g>
               </svg>
             </div>
-            <p class="key-feature__description">99.999% Uptime Guarantee</p>
+            <p class="font-bold text-white">99.999% Uptime Guarantee</p>
           </li>
-          <li class="key-feature">
-            <div class="key-feature__image">
+          <li class="max-w-[15rem] text-center m-3">
+            <div class="w-32 h-32 p-6 m-auto rounded-full border-x bg-light-pink">
               <svg viewBox="0 0 512 512">
                 <path
                   style="fill: #8e9aa9"
@@ -284,18 +279,18 @@
                 </g>
               </svg>
             </div>
-            <p class="key-feature__description">Lightning Fast CDN</p>
+            <p class="font-bold text-white">Lightning Fast CDN</p>
           </li>
         </ul>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="bg-black">
       <nav>
-        <ul class="main-footer__links">
-          <li class="main-footer__link">
+        <ul class="flex flex-col items-center justify-center p-4 sm:flex-row">
+          <li class="m-3 text-white hover:font-bold">
             <a href="#">Support</a>
           </li>
-          <li class="main-footer__link">
+          <li class="m-3 text-white hover:font-bold">
             <a href="#">Terms of Use</a>
           </li>
         </ul>

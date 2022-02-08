@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>uHost</title>
-    <link rel="shortcut icon" href="../favicon.png">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="packages.css">
-</head>
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="packages.css" />
+  </head>
 
-<body>
-    <div class="backdrop"></div>
-    <div class="background"></div>
-    <header class="main-header">
-        <div>
-            <button class="toggle-button">
-                <span class="toggle-button__bar"></span>
-                <span class="toggle-button__bar"></span>
-                <span class="toggle-button__bar"></span>
-            </button>
-            <a href="../index.html" class="main-header__brand">
-                <img src="../images/uhost-icon.png" alt="uHost - Your favorite hosting company">
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul class="main-nav__items">
-                <li class="main-nav__item">
-                    <a href="index.html">Packages</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="../customers/index.html">Customers</a>
-                </li>
-                <li class="main-nav__item main-nav__item--cta">
-                    <a href="../start-hosting/index.html">Start Hosting</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav__items">
-            <li class="mobile-nav__item">
-                <a href="index.html">Packages</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="../customers/index.html">Customers</a>
-            </li>
-            <li class="mobile-nav__item mobile-nav__item--cta">
-                <a href="../start-hosting/index.html">Start Hosting</a>
-            </li>
+  <body>
+    <div id="backdrop" class="z-40 hidden w-screen h-screen bg-slate-400 opacity-40"></div>
+    <div id="modal" class="hidden z-50 top-[20%] w-[40%] left-[30%] p-4 border-2 shadow-my-shadow bg-white font-bold text-center">
+      <h1 class="mb-2">Do you want to continue?</h1>
+      <div class="">
+        <a href="start-hosting/index.html" class="p-2 bg-green-500">Yes!</a>
+        <button id="button-cancel" class="p-2 bg-red-500" type="button">No!</button>
+      </div>
+    </div>
+    <header class="fixed z-10 flex items-center w-full mb-12 sm:justify-between h-14 bg-light-green">
+      <div class="flex sm:hidden">
+        <button id="toggle-btn" class="mt-3 ml-5">
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+          <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
+        </button>
+      </div>
+
+      <a href="../index.html">
+        <img src="../images/uhost-icon.png" class="w-10 h-10 ml-4" alt="uHost - Your favorite hosting company" />
+      </a>
+      <nav class="hidden mr-5 sm:inline-block">
+        <ul class="flex items-center font-bold">
+          <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
+            <a href="packages/index.html">Packages</a>
+          </li>
+          <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
+            <a href="customers/index.html">Customers</a>
+          </li>
+          <li class="px-4 py-2 mx-4 text-white rounded-lg bg-strong-pink hover:text-strong-pink hover:bg-white">
+            <a href="start-hosting/index.html">Start Hosting</a>
+          </li>
         </ul>
+      </nav>
+    </header>
+    <nav id="mobile-nav" class="z-30 hidden w-40 h-48 p-4 bg-light-green top-14">
+      <ul>
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
+          <a href="packages/index.html">Packages</a>
+        </li>
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
+          <a href="customers/index.html">Customers</a>
+        </li>
+        <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
+          <a href="start-hosting/index.html">Start Hosting</a>
+        </li>
+      </ul>
     </nav>
-    <main>
-        <section class="package" id="plus">
-            <a href="#">
-                <h1 class="package__title">Our PLUS Plan</h1>
-                <h2 class="package__badge">RECOMMENDED</h2>
-                <h2 class="package__subtitle">The most popular choice of our customers.</h2>
-                <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications
-                    are always available!</p>
-            </a>
-        </section>
-        <section class="package" id="free">
-            <a href="#">
-                <h1 class="package__title">Our FREE Plan</h1>
-                <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
-                <p class="package__info">Get started immediately at zero cost!</p>
-            </a>
-        </section>
-        <div class="clearfix"></div>
-        <section class="package" id="premium">
-            <a href="#">
-                <h1 class="package__title">Our PREMIUM Plan</h1>
-                <h2 class="package__subtitle">All your enterprise needs. Instant support, guaranteed uptime. </h2>
-                <p class="package__info">The best solution for small to large enterprises. Because hosting shouldn't be in the way!</p>
-            </a>
-        </section>
+    <main class="fixed w-screen h-screen bg-plans-background">
+      <section class="package" id="plus">
+        <a href="#">
+          <h1 class="package__title">Our PLUS Plan</h1>
+          <h2 class="package__badge">RECOMMENDED</h2>
+          <h2 class="package__subtitle">The most popular choice of our customers.</h2>
+          <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications are always available!</p>
+        </a>
+      </section>
+      <section class="package" id="free">
+        <a href="#">
+          <h1 class="package__title">Our FREE Plan</h1>
+          <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
+          <p class="package__info">Get started immediately at zero cost!</p>
+        </a>
+      </section>
+      <div class="clearfix"></div>
+      <section class="package" id="premium">
+        <a href="#">
+          <h1 class="package__title">Our PREMIUM Plan</h1>
+          <h2 class="package__subtitle">All your enterprise needs. Instant support, guaranteed uptime.</h2>
+          <p class="package__info">The best solution for small to large enterprises. Because hosting shouldn't be in the way!</p>
+        </a>
+      </section>
     </main>
-    <footer class="main-footer">
-        <nav>
-            <ul class="main-footer__links">
-                <li class="main-footer__link">
-                    <a href="#">Support</a>
-                </li>
-                <li class="main-footer__link">
-                    <a href="#">Terms of Use</a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="bg-black">
+      <nav>
+        <ul class="flex flex-col items-center justify-center p-4 sm:flex-row">
+          <li class="m-3 text-white hover:font-bold">
+            <a href="#">Support</a>
+          </li>
+          <li class="m-3 text-white hover:font-bold">
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
     <script src="../shared.js"></script>
-</body>
-
+  </body>
 </html>

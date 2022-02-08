@@ -4,10 +4,11 @@ module.exports = {
     extend: {
       colors: {
         'light-green': '#2ddf5c',
-        'light-pink': '#ff1b68',
+        'strong-pink': '#ff1b68',
         'melon-green': '#d5ffdc',
         'medium-green': '#19b84c',
         'dark-green': '#0e4f1f',
+        'light-pink': '#ffcede',
       },
       boxShadow: {
         'my-shadow': '2px 2px 2px 2px rgb(0 0 0 / 50%)',
@@ -15,6 +16,13 @@ module.exports = {
       fontFamily: {
         montserrat: ['Montserrat'],
         anton: ['Anton'],
+      },
+      backgroundImage: {
+        'main-image': "linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url('/dist/images/freedom.jpg')",
+        'plans-background': "url('/dist/images/plans-background.jpg')",
+      },
+      backgroundPosition: {
+        'product-overview': '50% 25%',
       },
     },
   },
