@@ -17,9 +17,11 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
   });
 }
 
-backdrop.addEventListener('click', function () {
-  closeModal();
-});
+if (backdrop) {
+  backdrop.addEventListener('click', function () {
+    closeModal();
+  });
+}
 
 if (modalNoButton) {
   modalNoButton.addEventListener('click', closeModal);

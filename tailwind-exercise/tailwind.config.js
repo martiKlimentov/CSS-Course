@@ -2,6 +2,15 @@ module.exports = {
   content: ['./dist/**/*.{html,js}'],
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1.5s ease-in-out infinite',
+      },
       colors: {
         'light-green': '#2ddf5c',
         'strong-pink': '#ff1b68',

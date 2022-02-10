@@ -20,7 +20,7 @@
         <button id="button-cancel" class="p-2 bg-red-500" type="button">No!</button>
       </div>
     </div>
-    <header class="fixed z-10 flex items-center w-full sm:justify-between h-14 bg-light-green">
+    <header class="fixed z-30 flex items-center w-full sm:justify-between h-14 bg-light-green">
       <div class="flex sm:hidden">
         <button id="toggle-btn" class="mt-3 ml-5">
           <span class="block w-8 h-1 mb-1 bg-dark-green"></span>
@@ -40,13 +40,13 @@
           <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
             <a href="customers/index.html">Customers</a>
           </li>
-          <li class="px-4 py-2 mx-4 text-white rounded-lg bg-strong-pink hover:text-strong-pink hover:bg-white">
+          <li class="px-4 py-2 mx-4 text-white rounded-lg bg-strong-pink animate-wiggle hover:text-strong-pink hover:bg-white">
             <a href="start-hosting/index.html">Start Hosting</a>
           </li>
         </ul>
       </nav>
     </header>
-    <nav id="mobile-nav" class="absolute z-30 w-40 h-48 p-4 duration-500 transform -translate-x-full bg-light-green top-14">
+    <nav id="mobile-nav" class="absolute z-30 w-40 p-4 duration-500 transform -translate-x-full h-72 bg-light-green top-14">
       <ul>
         <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
           <a href="packages/index.html">Packages</a>
@@ -63,10 +63,10 @@
       <section id="product-overview" class="relative bg-cover top-14 h-72 bg-main-image bg-product-overview">
         <h1 class="absolute text-xl font-bold text-white sm:text-5xl bottom-8 left-8 font-anton">Get the freedom you deserve.</h1>
       </section>
-      <section id="plans" class="w-screen">
+      <section id="plans" class="w-screen mt-20">
         <h1 class="block w-screen my-6 text-2xl font-bold text-center text-light-green">Choose Your Plan</h1>
         <div class="flex flex-col items-center justify-center sm:flex-row plan">
-          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem]">
+          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem] hover:scale-105 transition-all">
             <h1 class="mb-5 text-lg font-bold text-dark-green">FREE</h1>
             <h2 class="mb-5 text-2xl font-bold text-gray-400">$0/month</h2>
             <h3 class="mb-5 font-bold">For hobby projects or small teams.</h3>
@@ -78,7 +78,7 @@
             </ul>
             <button class="p-2 mt-2 font-bold text-white rounded-lg bg-dark-green hover:bg-white hover:text-dark-green">CHOOSE PLAN</button>
           </article>
-          <article class="flex-col p-4 text-center bg-medium-green w-[19rem] h-[25rem] shadow-my-shadow">
+          <article class="z-20 flex-col p-4 text-center bg-medium-green w-[19rem] h-[25rem] shadow-my-shadow hover:scale-110 transition-all">
             <h1 class="w-full p-2 text-xl font-bold bg-white rounded-lg shadow-my-shadow text-light-green">RECOMMENDED</h1>
             <h1 class="mt-6 font-bold text-white">PLUS</h1>
             <h2 class="mt-6 text-2xl font-bold text-dark-green">$29/month</h2>
@@ -91,7 +91,7 @@
             </ul>
             <button class="p-2 font-bold text-white rounded-lg bg-dark-green hover:bg-white hover:text-dark-green">CHOOSE PLAN</button>
           </article>
-          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem]">
+          <article class="flex-col p-4 text-center w-[19rem] bg-melon-green min-h-[22rem] hover:scale-105 transition-all">
             <h1 class="mb-5 text-lg font-bold text-dark-green">PREMIUM</h1>
             <h2 class="mb-5 text-2xl font-bold text-gray-400">$99/month</h2>
             <h3 class="mb-5 font-bold">Your enterprise solution.</h3>
