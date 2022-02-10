@@ -35,11 +35,13 @@ function closeModal() {
 }
 
 toggleButton.addEventListener('click', function () {
-  if (mobileNav.classList.contains('hidden')) {
-    mobileNav.classList.remove('hidden');
-    mobileNav.classList.add('fixed');
+  if (mobileNav.classList.contains('-translate-x-full')) {
+    mobileNav.classList.remove('-translate-x-full');
+    //mobileNav.classList.remove('hidden');
+    mobileNav.classList.add('translate-x-0');
   } else {
-    mobileNav.classList.remove('fixed');
-    mobileNav.classList.add('hidden');
+    mobileNav.classList.remove('translate-x-0');
+    mobileNav.classList.add('-translate-x-full');
+    //mobileNav.classList.add('hidden');
   }
 });

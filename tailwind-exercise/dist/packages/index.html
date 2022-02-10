@@ -10,15 +10,9 @@
     <link rel="stylesheet" href="packages.css" />
   </head>
 
-  <body>
+  <body >
     <div id="backdrop" class="z-40 hidden w-screen h-screen bg-slate-400 opacity-40"></div>
-    <div id="modal" class="hidden z-50 top-[20%] w-[40%] left-[30%] p-4 border-2 shadow-my-shadow bg-white font-bold text-center">
-      <h1 class="mb-2">Do you want to continue?</h1>
-      <div class="">
-        <a href="start-hosting/index.html" class="p-2 bg-green-500">Yes!</a>
-        <button id="button-cancel" class="p-2 bg-red-500" type="button">No!</button>
-      </div>
-    </div>
+    <div class="w-screen h-screen bg-fixed bg-plans-background"></body>
     <header class="fixed z-10 flex items-center w-full mb-12 sm:justify-between h-14 bg-light-green">
       <div class="flex sm:hidden">
         <button id="toggle-btn" class="mt-3 ml-5">
@@ -37,15 +31,15 @@
             <a href="packages/index.html">Packages</a>
           </li>
           <li class="mx-4 text-dark-green hover:border-b-4 hover:text-white">
-            <a href="customers/index.html">Customers</a>
+            <a href="../customers/index.html">Customers</a>
           </li>
           <li class="px-4 py-2 mx-4 text-white rounded-lg bg-strong-pink hover:text-strong-pink hover:bg-white">
-            <a href="start-hosting/index.html">Start Hosting</a>
+            <a href="../start-hosting/index.html">Start Hosting</a>
           </li>
         </ul>
       </nav>
     </header>
-    <nav id="mobile-nav" class="z-30 hidden w-40 h-48 p-4 bg-light-green top-14">
+    <nav id="mobile-nav" class="absolute z-30 w-40 h-48 p-4 duration-500 transform -translate-x-full bg-light-green top-14">
       <ul>
         <li class="p-1 my-2 text-center text-white rounded-2xl bg-strong-pink hover:text-strong-pink hover:bg-white">
           <a href="packages/index.html">Packages</a>
@@ -58,20 +52,20 @@
         </li>
       </ul>
     </nav>
-    <main class="fixed w-screen h-screen bg-plans-background">
-      <section class="package" id="plus">
-        <a href="#">
-          <h1 class="package__title">Our PLUS Plan</h1>
-          <h2 class="package__badge">RECOMMENDED</h2>
-          <h2 class="package__subtitle">The most popular choice of our customers.</h2>
-          <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications are always available!</p>
+    <main>
+      <section class="w-[80%] mx-4 relative border-4 border-dark-green border-solid mt-16 hover:border-strong-pink" id="plus">
+        <a href="#" class="block p-8 ">
+          <h1 class="">Our PLUS Plan</h1>
+          <h2 class="absolute top-0 right-0 p-2 m-5 text-xs font-bold text-white bg-strong-pink">RECOMMENDED</h2>
+          <h2 class="text-gray-400">The most popular choice of our customers.</h2>
+          <p class="p-4 text-lg bg-white border-2 border-dark-green text-dark-green">Benefit from increased storage and faster support to ensure that your mission-critical data and applications are always available!</p>
         </a>
       </section>
-      <section class="package" id="free">
-        <a href="#">
-          <h1 class="package__title">Our FREE Plan</h1>
-          <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
-          <p class="package__info">Get started immediately at zero cost!</p>
+      <section class="w-[80%] mx-4 relative border-4 border-dark-green border-solid mt-16 hover:border-strong-pink" id="free">
+        <a href="#" class="block p-8 ">
+          <h1 class="">Our FREE Plan</h1>
+          <h2 class="text-gray-400">An extremely solid start into our hosting world.</h2>
+          <p class="p-4 text-lg bg-white border-2 border-dark-green text-dark-green">Get started immediately at zero cost!</p>
         </a>
       </section>
       <div class="clearfix"></div>
