@@ -18,6 +18,10 @@ module.exports = {
         'medium-green': '#19b84c',
         'dark-green': '#0e4f1f',
         'light-pink': '#ffcede',
+        'transparent-green': 'rgba(213, 255, 220, 0.90)',
+      },
+      border: {
+        'form-border': '1px solid red',
       },
       boxShadow: {
         'my-shadow': '2px 2px 2px 2px rgb(0 0 0 / 50%)',
